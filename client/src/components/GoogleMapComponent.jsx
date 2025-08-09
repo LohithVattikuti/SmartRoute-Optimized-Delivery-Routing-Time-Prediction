@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, Polyline, Marker, InfoWindow } from "@react-goog
 
 const GoogleMapComponent = ({ routeData }) => {
   const [routePath, setRoutePath] = useState([
-    { lat: 19.116458, lng: 72.902696 }, // Warehouse
+    { lat: 40.7128, lng: -74.0060 }, // New York Warehouse
   ]);
 
   const [orders, setOrders] = useState([]); // Store fetched order details
@@ -17,10 +17,10 @@ const GoogleMapComponent = ({ routeData }) => {
     if (routeData?.assigned_orders?.length) {
       fetchOrders(routeData.assigned_orders);
     }
-    if (routeData== null){
+    if (routeData == null) {
       setOrders([]);
       setRoutePath([
-        { lat: 19.116458, lng: 72.902696 }, // Warehouse
+        { lat: 40.7128, lng: -74.0060 }, // New York Warehouse
       ]);
     }
   }, [routeData]);
@@ -40,7 +40,7 @@ const GoogleMapComponent = ({ routeData }) => {
       console.error("Error fetching orders:", error);
     }
   };
-  const warehouseCoordinates = { lat: 19.116458, lng: 72.902696 }; // Warehouse location
+  const warehouseCoordinates = { lat: 40.7128, lng: -74.0060 }; // New York Warehouse location
   return (
     <div>
       <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
