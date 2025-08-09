@@ -25,7 +25,7 @@ const Navbar = () => {
               <img src={logo} alt="logo" className="h-10 w-14 mr-2" />
             </Link>
             <Link to="/">
-              <span className="text-xl font-bold tracking-tight">Logistics</span>
+              <span className="text-xl font-bold tracking-tight text-blue-500">SmartRoute</span>
             </Link>
           </div>
 
